@@ -6,6 +6,7 @@ const productsArray = [
         type: 'phone',
         capacity: 64,
         price: 500,
+        image: '/images/11promax.png',
     },
     {
         id: 2,
@@ -14,6 +15,7 @@ const productsArray = [
         type: 'phone',
         capacity: 64,
         price: 750,
+        image: '/images/12pro.png',
     },
     {
         id: 3,
@@ -22,6 +24,7 @@ const productsArray = [
         type: 'phone',
         capacity: 64,
         price: 600,
+        image: '/images/11promax.png',
     },
     {
         id: 4,
@@ -30,6 +33,7 @@ const productsArray = [
         type: 'phone',
         capacity: 64,
         price: 1000,
+        image: '/images/13.png',
     },
     {
         id: 5,
@@ -38,14 +42,16 @@ const productsArray = [
         type: 'phone',
         capacity: 64,
         price: 800,
+        image: '/images/12pro.png',
     },
     {
         id: 6,
-        name: 'iPhone 11',
-        description: 'This is iPhone 11',
+        name: 'iPhone 13 Pro',
+        description: 'This is iPhone 13 Pro',
         type: 'phone',
         capacity: 64,
         price: 700,
+        image: '/images/iphone13pro.jpeg',
     },
 ]
 export default productsArray
