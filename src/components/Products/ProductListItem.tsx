@@ -1,7 +1,8 @@
 import React from 'react'
 import { Button, Card, CardActions, CardContent } from '@mui/material'
 import './ProductListItem.scss'
-type ProductProps = {
+
+export type ProductProps = {
     name: string
     description: string
     type: string
