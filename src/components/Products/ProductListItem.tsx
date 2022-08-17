@@ -8,6 +8,7 @@ export type ProductProps = {
     type: string
     capacity: number
     price: number
+    id?: number
 }
 
 const ProductListItem = ({
