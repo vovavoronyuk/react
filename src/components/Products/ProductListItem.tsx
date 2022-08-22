@@ -18,8 +18,21 @@ export type ProductProps = {
     id?: number
     image: string
 }
+type State = {
+    count: number
+}
 
-class ProductListItem extends Component<ProductProps> {
+class ProductListItem extends Component<ProductProps, State> {
+    state = {
+        count: 1,
+    }
+    // constructor(props: ProductProps) {
+    //     super(props)
+    //     this.state = {
+    //         count: 1,
+    //     }
+    // }
+
     render() {
         return (
             <Card>
@@ -40,7 +53,11 @@ class ProductListItem extends Component<ProductProps> {
                     <div className="product-price">$ {this.props.price}</div>
                     <div className="product-quantity">
                         <Button variant="contained">-</Button>
-                        <TextField size="small" value={1} variant="outlined" />
+                        <TextField
+                            size="small"
+                            value={this.state.count}
+                            variant="outlined"
+                        />
                         <Button variant="contained">+</Button>
                     </div>
                 </CardContent>
