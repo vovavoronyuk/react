@@ -8,6 +8,7 @@ import {
 } from '@mui/material'
 
 import './ProductListItem.scss'
+import { color } from '@mui/system'
 
 export type ProductProps = {
     name: string
@@ -20,11 +21,13 @@ export type ProductProps = {
 }
 type State = {
     count: number
+    color: string
 }
 
 class ProductListItem extends Component<ProductProps, State> {
     state = {
         count: 1,
+        color: 'green',
     }
 
     onDecrementClick = () => {
@@ -37,7 +40,11 @@ class ProductListItem extends Component<ProductProps, State> {
             count: prevState.count + 1,
         }))
     }
-
+    changeColor = () => {
+        this.setState({
+            color: 'red',
+        })
+    }
     render() {
         const { image, name, description, type, capacity, price } = this.props
         return (
@@ -70,6 +77,8 @@ class ProductListItem extends Component<ProductProps, State> {
                             +
                         </Button>
                     </div>
+                    <p>Color: {this.state.color}</p>
+                    <button onClick={this.changeColor}>Change color</button>
                 </CardContent>
                 <CardActions className="btn-wrap">
                     <Button variant="outlined">Add to cart</Button>
